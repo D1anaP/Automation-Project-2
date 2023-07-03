@@ -18,7 +18,6 @@ describe('Issue deleting', () => {
             .click()
             .should('not.exist');
 
-        //getIssueDetailsModal()
         cy.reload();
         
     
