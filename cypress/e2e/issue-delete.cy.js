@@ -23,6 +23,35 @@ describe('Issue deleting', () => {
     
     });
 
+    it.only('Start the deleting issue process, but cancelling this action', () => {
+        getIssueDetailsModal()
+            .find('[data-testid="icon:trash"]')
+            .click();
+
+        cy.get('[data-testid="modal:confirm"]')
+            .contains('button', 'Cancel')
+            .click()
+            .should('not.exist');
+
+            cy.get('[data-testid="icon:close"]').first().click()
+
+            //cy.get('[data-testid="icon:close"]')
+            //.trigger('click');
+            //.click();
+
+            //getIssueDetailsModal()
+            //.find('[data-testid="icon:close"]')
+           // .click({ multiple: true });
+            
+            
+        cy.reload();
+      cy.get('[data-testid="board-list:backlog').should('be.visible')
+
+        
+        //getIssueDetailsModal()
+        
+    
+    });
 
 
 

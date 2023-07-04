@@ -113,8 +113,10 @@ describe('Issue create', () => {
       
       //open issue type dropdown and choose Task
       cy.get('[data-testid="select:type"]').click();
-      cy.get('[data-testid="select-option:task"]')
-          .trigger('click');
+      cy.get('[data-testid="select-option:Task"]');
+      cy.get('.sc-iqzUVk.cUBVJX').contains('Task')
+      .trigger('click');
+      
             
       //Type value to description input field
       cy.get('.ql-editor').type('Dianas test for course');
