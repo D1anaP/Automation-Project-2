@@ -37,10 +37,8 @@ describe('Issue deleting', () => {
             
             
         cy.reload();
-      cy.get('[data-testid="board-list:backlog').should('be.visible')
+        cy.get('[data-testid="board-list:backlog').should('be.visible')
 
-        
-        //getIssueDetailsModal()
         
     
     });
