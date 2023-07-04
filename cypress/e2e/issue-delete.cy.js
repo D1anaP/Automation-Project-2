@@ -33,15 +33,7 @@ describe('Issue deleting', () => {
             .click()
             .should('not.exist');
 
-            cy.get('[data-testid="icon:close"]').first().click()
-
-            //cy.get('[data-testid="icon:close"]')
-            //.trigger('click');
-            //.click();
-
-            //getIssueDetailsModal()
-            //.find('[data-testid="icon:close"]')
-           // .click({ multiple: true });
+        cy.get('[data-testid="icon:close"]').first().click()
             
             
         cy.reload();
