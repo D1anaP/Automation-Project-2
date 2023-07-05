@@ -23,7 +23,7 @@ describe('Issue deleting', () => {
     
     });
 
-    it.only('Start the deleting issue process, but cancelling this action', () => {
+    it('Start the deleting issue process, but cancelling this action', () => {
         getIssueDetailsModal()
             .find('[data-testid="icon:trash"]')
             .click();

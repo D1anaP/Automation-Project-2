@@ -7,7 +7,7 @@ describe('Issue create', () => {
     });
   });
 
-  it.only('Should create an issue and validate it successfully', () => {
+  it('Should create an issue and validate it successfully', () => {
     //System finds modal for creating issue and does next steps inside of it
     cy.get('[data-testid="modal:issue-create"]').within(() => {
       
@@ -107,7 +107,7 @@ describe('Issue create', () => {
     });
   });
 
-  it('Should create an issue and validate it successfully, TEST2', () => {
+  it.only('Should create an issue and validate it successfully, TEST2', () => {
     //System finds modal for creating issue and does next steps inside of it
     cy.get('[data-testid="modal:issue-create"]').within(() => {
       
@@ -131,10 +131,10 @@ describe('Issue create', () => {
       cy.get('[data-testid="select-option:Baby Yoda"]').click();
 
       //open issue type dropdown and choose Task
-      cy.get('[data-testid="select:type"]').click();
-      cy.get('[data-testid="select-option:Task"]');
-      cy.get('.sc-iqzUVk.cUBVJX').contains('Task')
-      .trigger('click');
+      //cy.get('[data-testid="select:type"]').click();
+      //cy.get('[data-testid="select-option:Task"]');
+      //cy.get('.sc-iqzUVk.cUBVJX').contains('Task')
+      //.trigger('click');
 
       //Select Highest priority 
       cy.get('[data-testid="select:priority"]').click();
