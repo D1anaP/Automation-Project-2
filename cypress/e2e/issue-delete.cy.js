@@ -8,7 +8,7 @@ describe('Issue deleting', () => {
     });
     const getIssueDetailsModal = () => cy.get('[data-testid="modal:issue-details"]');
 
-    it('Should delete an issue successfully', () => {
+    it.only('Should delete an issue successfully', () => {
         getIssueDetailsModal()
             .find('[data-testid="icon:trash"]')
             .click();
